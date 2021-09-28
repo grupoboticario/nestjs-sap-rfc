@@ -1,0 +1,20 @@
+# source
+lib
+package-lock.json
+tsconfig.json
+tsconfig.build.json
+.prettierrc
+.prettierignore
+
+# github
+.github
+CONTRIBUTING.md
+
+# misc
+.commitlintrc
+.czrc
+.editorconfig
+.eslintrc.js
+.lintstagedrc
+.releaserc.json
+.eslintignore
