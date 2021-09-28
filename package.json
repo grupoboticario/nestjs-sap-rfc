@@ -1,7 +1,7 @@
 {
   "name": "@grupoboticario/nestjs-sap-rfc",
   "version": "1.0.0",
-  "author": "Alvaro A. Lima Junior <alvaro.junior@grupoboticario.com.br>",
+  "author": "Grupo Boticário",
   "description": "NestJS SAP RFC Client, providing convenient ABAP business logic consumption from NestJS",
   "license": "MIT",
   "main": "dist/index.js",
@@ -92,7 +92,8 @@
     "moduleFileExtensions": [
       "js",
       "json",
-      "ts"
+      "ts",
+      "node"
     ],
     "rootDir": "lib",
     "testRegex": ".*\\.spec\\.ts$",

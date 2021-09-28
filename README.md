@@ -273,10 +273,6 @@ $ npm run doc:serve
 
 Use `npm run commit` instead of `git commit` to use commitizen.
 
-## 👥 Stay in touch
-
-- E-mail - [Alvaro Lima Junior](mailto:alvaro.junior@grupoboticario.com.br)
-
 ## 🔨 Built With
 
 - [NestJS](https://github.com/nestjs/nest)
