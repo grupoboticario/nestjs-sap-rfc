@@ -6,6 +6,18 @@ updates:
       interval: daily
       time: '08:00'
     open-pull-requests-limit: 10
+    versioning-strategy: increase
+    ignore:
+      - dependency-name: '@nestjs/cli'
+        versions:
+          - '8.x'
+      - dependency-name: '@nestjs/schematics'
+        versions:
+          - '8.x'
+      - dependency-name: '@types/jest'
+        versions:
+          - '27.x'
+
   - package-ecosystem: github-actions
     directory: '/'
     schedule:
