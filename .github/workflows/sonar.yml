@@ -11,6 +11,7 @@ jobs:
   sonarCloudTrigger:
     name: SonarCloud Trigger
     runs-on: ubuntu-latest
+    if: github.actor != 'depbot'
     steps:
       - uses: actions/checkout@v2
         with:
@@ -44,4 +45,4 @@ jobs:
         uses: sonarsource/sonarcloud-github-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONARCLOUD_TOKEN }}
