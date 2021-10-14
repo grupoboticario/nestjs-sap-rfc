@@ -50,7 +50,7 @@
     "@nestjs/core": "^7.0.0 | ^8.0.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^13.2.0",
+    "@commitlint/cli": "^13.2.1",
     "@commitlint/config-conventional": "^13.2.0",
     "@compodoc/compodoc": "^1.1.15",
     "@nestjs/cli": "^7.6.0",
