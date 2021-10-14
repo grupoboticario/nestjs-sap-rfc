@@ -266,8 +266,6 @@ $ npm run doc
 $ npm run doc:serve
 ```
 
-[See documentation](https://grupoboticario.github.io/nestjs-sap-rfc/)
-
 ## ⬆️ Commitizen
 
 [commitizen](https://github.com/commitizen/cz-cli) is a command line utility that makes it easier to create commit messages following the [conventional commit format](https://conventionalcommits.org) specification.
