@@ -11,7 +11,7 @@ jobs:
   sonarCloudTrigger:
     name: SonarCloud Trigger
     runs-on: ubuntu-latest
-    if: github.actor != 'depbot'
+    if: github.actor != 'dependabot'
     steps:
       - uses: actions/checkout@v2
         with:
