@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">NestJS SAP RFC Client</p>
-
+<!---
 ![npm](https://img.shields.io/npm/v/@grupoboticario/nestjs-sap-rfc)
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/grupoboticario/nestjs-sap-rfc)
 ![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/grupoboticario/nestjs-sap-rfc/node-rfc)
@@ -23,6 +23,7 @@
 ![npm type definitions](https://img.shields.io/npm/types/@grupoboticario/nestjs-sap-rfc)
 ![GitHub repo size](https://img.shields.io/github/repo-size/grupoboticario/nestjs-sap-rfc)
 ![npm](https://img.shields.io/npm/dw/@grupoboticario/nestjs-sap-rfc)
+-->
 
 ## 📚 Description
 
