@@ -13,4 +13,4 @@ Please report (suspected) security vulnerabilities to **[EMAIL A DEFINIR]**. You
 * Evidences (only .jpg and .png will be accepted);
 * (Optional) Any possible solution to the issue identified.
 
-We apreciate your your help on conrtributing to our Security and we expect you to comply with all applicable laws.
+We apreciate your help on contributing to our Security and we expect you to comply with all applicable laws.
