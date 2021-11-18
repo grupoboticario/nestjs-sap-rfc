@@ -2,7 +2,7 @@
 
 ## Reporting a Vulnerability
 
-Please report (suspected) security vulnerabilities to **[EMAIL A DEFINIR]**. You will receive a response from us within one week. If the issue is confirmed, we will release a patch as soon as possible depending on complexity.
+Please report (suspected) security vulnerabilities to infosec@grupoboticario.com.br. Please, be patient while we analyse the issue, it might take a few days. If the issue is confirmed, we will release a patch as soon as possible depending on complexity.
 
 **Be sure to include the following information on the e-mail:**
 * Type of vulnerability (XSS, Injection, CSRF, etc.);
