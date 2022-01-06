@@ -5,25 +5,24 @@
 </p>
 
 <p align="center">NestJS SAP RFC Client</p>
-<!---
-![npm](https://img.shields.io/npm/v/@grupoboticario/nestjs-sap-rfc)
+
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/grupoboticario/nestjs-sap-rfc/CI)
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/grupoboticario/nestjs-sap-rfc)
 ![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/grupoboticario/nestjs-sap-rfc/node-rfc)
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/grupoboticario/nestjs-sap-rfc/CI)
-[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=b15648de-145e-4a88-87e7-b2a57e04eaeb&metric=alert_status)](https://sonarqube.com/dashboard/index/b15648de-145e-4a88-87e7-b2a57e04eaeb)
-[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=b15648de-145e-4a88-87e7-b2a57e04eaeb&metric=coverage)](https://sonarqube.com/dashboard/index/b15648de-145e-4a88-87e7-b2a57e04eaeb)
-[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=b15648de-145e-4a88-87e7-b2a57e04eaeb&metric=code_smells)](https://sonarqube.com/dashboard/index/b15648de-145e-4a88-87e7-b2a57e04eaeb)
-[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=b15648de-145e-4a88-87e7-b2a57e04eaeb&metric=vulnerabilities)](https://sonarqube.com/dashboard/index/b15648de-145e-4a88-87e7-b2a57e04eaeb)
-[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=b15648de-145e-4a88-87e7-b2a57e04eaeb&metric=security_rating)](https://sonarqube.com/dashboard/index/b15648de-145e-4a88-87e7-b2a57e04eaeb)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 ![GitHub](https://img.shields.io/github/license/grupoboticario/nestjs-sap-rfc)
-![npm type definitions](https://img.shields.io/npm/types/@grupoboticario/nestjs-sap-rfc)
+[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=b15648de-145e-4a88-87e7-b2a57e04eaeb&metric=alert_status)](https://sonarqube.com/dashboard/index/b15648de-145e-4a88-87e7-b2a57e04eaeb)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=b15648de-145e-4a88-87e7-b2a57e04eaeb&metric=coverage)](https://sonarqube.com/dashboard/index/b15648de-145e-4a88-87e7-b2a57e04eaeb)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=b15648de-145e-4a88-87e7-b2a57e04eaeb&metric=code_smells)](https://sonarqube.com/dashboard/index/b15648de-145e-4a88-87e7-b2a57e04eaeb)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=b15648de-145e-4a88-87e7-b2a57e04eaeb&metric=vulnerabilities)](https://sonarqube.com/dashboard/index/b15648de-145e-4a88-87e7-b2a57e04eaeb)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=b15648de-145e-4a88-87e7-b2a57e04eaeb&metric=security_rating)](https://sonarqube.com/dashboard/index/b15648de-145e-4a88-87e7-b2a57e04eaeb)
 ![GitHub repo size](https://img.shields.io/github/repo-size/grupoboticario/nestjs-sap-rfc)
+![npm](https://img.shields.io/npm/v/@grupoboticario/nestjs-sap-rfc)
+![npm type definitions](https://img.shields.io/npm/types/@grupoboticario/nestjs-sap-rfc)
 ![npm](https://img.shields.io/npm/dw/@grupoboticario/nestjs-sap-rfc)
--->
 
 ## 📚 Description
 
