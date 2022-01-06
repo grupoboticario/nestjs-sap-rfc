@@ -13,5 +13,8 @@
     ".commitlintrc": "json",
     ".lintstagedrc": "json",
     ".czrc": "json"
+  },
+  "[CODEOWNERS]": {
+    "editor.formatOnSave": false
   }
 }
