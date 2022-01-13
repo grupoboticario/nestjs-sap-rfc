@@ -55,7 +55,7 @@
     "@compodoc/compodoc": "^1.1.18",
     "@nestjs/cli": "^8.1.8",
     "@nestjs/common": "^8.2.4",
-    "@nestjs/core": "^8.2.4",
+    "@nestjs/core": "^8.2.5",
     "@nestjs/schematics": "^8.0.5",
     "@nestjs/testing": "^8.2.4",
     "@semantic-release/changelog": "^6.0.1",
