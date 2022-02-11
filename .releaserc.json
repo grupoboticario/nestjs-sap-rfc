@@ -6,14 +6,56 @@
       {
         "preset": "conventionalcommits",
         "releaseRules": [
+          { "breaking": true, "release": "major" },
+          { "revert": true, "release": "patch" },
+          { "type": "feat", "release": "minor" },
+          { "type": "fix", "release": "patch" },
           { "type": "docs", "scope": "README", "release": "patch" },
-          { "type": "chore", "release": "patch" }
-        ]
+          { "type": "chore", "release": "patch" },
+          { "type": "refactor", "release": "patch" }
+        ],
+        "presetConfig": {
+          "types": [
+            { "type": "feat", "section": "Features", "hidden": false },
+            { "type": "fix", "section": "Bug Fixes", "hidden": false },
+            { "type": "docs", "section": "Docs", "hidden": false },
+            {
+              "type": "chore",
+              "section": "Dependency updates",
+              "hidden": false
+            },
+            { "type": "refactor", "section": "Refactor", "hidden": false }
+          ]
+        }
       }
     ],
     [
       "@semantic-release/release-notes-generator",
-      { "preset": "conventionalcommits" }
+      {
+        "preset": "conventionalcommits",
+        "releaseRules": [
+          { "breaking": true, "release": "major" },
+          { "revert": true, "release": "patch" },
+          { "type": "feat", "release": "minor" },
+          { "type": "fix", "release": "patch" },
+          { "type": "docs", "scope": "README", "release": "patch" },
+          { "type": "chore", "release": "patch" },
+          { "type": "refactor", "release": "patch" }
+        ],
+        "presetConfig": {
+          "types": [
+            { "type": "feat", "section": "Features", "hidden": false },
+            { "type": "fix", "section": "Bug Fixes", "hidden": false },
+            { "type": "docs", "section": "Docs", "hidden": false },
+            {
+              "type": "chore",
+              "section": "Dependency updates",
+              "hidden": false
+            },
+            { "type": "refactor", "section": "Refactor", "hidden": false }
+          ]
+        }
+      }
     ],
     ["@semantic-release/changelog", { "preset": "conventionalcommits" }],
     ["@semantic-release/npm", { "npmPublish": false }],
