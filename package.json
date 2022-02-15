@@ -1,5 +1,5 @@
 {
-  "name": "@grupoboticario/nestjs-sap-rfc",
+  "name": "nestjs-sap-rfc",
   "version": "1.2.4",
   "author": "Grupo Boticário",
   "description": "NestJS SAP RFC Client, providing convenient ABAP business logic consumption from NestJS",
