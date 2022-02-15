@@ -20,9 +20,9 @@
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=b15648de-145e-4a88-87e7-b2a57e04eaeb&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=b15648de-145e-4a88-87e7-b2a57e04eaeb)
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=b15648de-145e-4a88-87e7-b2a57e04eaeb&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=b15648de-145e-4a88-87e7-b2a57e04eaeb)
 ![GitHub repo size](https://img.shields.io/github/repo-size/grupoboticario/nestjs-sap-rfc)
-![npm](https://img.shields.io/npm/v/@grupoboticario/nestjs-sap-rfc)
-![npm type definitions](https://img.shields.io/npm/types/@grupoboticario/nestjs-sap-rfc)
-![npm](https://img.shields.io/npm/dw/@grupoboticario/nestjs-sap-rfc)
+![npm](https://img.shields.io/npm/v/nestjs-sap-rfc)
+![npm type definitions](https://img.shields.io/npm/types/nestjs-sap-rfc)
+![npm](https://img.shields.io/npm/dw/nestjs-sap-rfc)
 
 ## 📚 Description
 
@@ -33,7 +33,7 @@ NestJS SAP RFC Client, providing convenient ABAP business logic consumption from
 [SAP NWRFC SDK installation](https://github.com/SAP/node-rfc/blob/main/doc/installation.md#sap-nwrfc-sdk-installation)
 
 ```bash
-npm install @grupoboticario/nestjs-sap-rfc --save
+npm install nestjs-sap-rfc --save
 ```
 
 ## 🏃 Getting Started
@@ -43,7 +43,7 @@ Register `SapModule` module in app.module.ts
 [Connection Pool](https://github.com/SAP/node-rfc/blob/main/doc/usage.md#connection-pool)
 
 ```ts
-import { SapModule } from '@grupoboticario/nestjs-sap-rfc';
+import { SapModule } from 'nestjs-sap-rfc';
 import { Module } from '@nestjs/common';
 
 @Module({
@@ -69,7 +69,7 @@ export class AppModule {}
 [Connection Pool](https://github.com/SAP/node-rfc/blob/main/doc/usage.md#connection-pool) (Async Module)
 
 ```ts
-import { SapModule } from '@grupoboticario/nestjs-sap-rfc';
+import { SapModule } from 'nestjs-sap-rfc';
 import { Module } from '@nestjs/common';
 
 @Module({
@@ -99,7 +99,7 @@ export class AppModule {}
 [Connection Pool](https://github.com/SAP/node-rfc/blob/main/doc/usage.md#connection-pool) (Async Module + ConfigService)
 
 ```ts
-import { SapModule } from '@grupoboticario/nestjs-sap-rfc';
+import { SapModule } from 'nestjs-sap-rfc';
 import { Module } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 
@@ -134,7 +134,7 @@ export class AppModule {}
 [Direct Client](https://github.com/SAP/node-rfc/blob/main/doc/usage.md#client)
 
 ```ts
-import { SapModule } from '@grupoboticario/nestjs-sap-rfc';
+import { SapModule } from 'nestjs-sap-rfc';
 import { Module } from '@nestjs/common';
 
 @Module({
@@ -152,7 +152,7 @@ export class AppModule {}
 [Direct Client](https://github.com/SAP/node-rfc/blob/main/doc/usage.md#client) (Async Module)
 
 ```ts
-import { SapModule } from '@grupoboticario/nestjs-sap-rfc';
+import { SapModule } from 'nestjs-sap-rfc';
 import { Module } from '@nestjs/common';
 
 @Module({
@@ -174,7 +174,7 @@ export class AppModule {}
 [Direct Client](https://github.com/SAP/node-rfc/blob/main/doc/usage.md#client) (Async Module + ConfigService)
 
 ```ts
-import { SapModule } from '@grupoboticario/nestjs-sap-rfc';
+import { SapModule } from 'nestjs-sap-rfc';
 import { Module } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 
@@ -198,7 +198,7 @@ export class AppModule {}
 Inject SapService
 
 ```ts
-import { InjectSapService, SapService } from '@grupoboticario/nestjs-sap-rfc';
+import { InjectSapService, SapService } from 'nestjs-sap-rfc';
 import { Injectable } from '@nestjs/common';
 
 @Injectable()
@@ -222,7 +222,7 @@ export class MyService {
 Inject SapService by name
 
 ```ts
-import { InjectSapService, SapService } from '@grupoboticario/nestjs-sap-rfc';
+import { InjectSapService, SapService } from 'nestjs-sap-rfc';
 import { Inject } from '@nestjs/common';
 
 @Injectable()
