@@ -1,3 +1,10 @@
+### [1.2.5](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v1.2.4...v1.2.5) (2022-02-15)
+
+
+### Dependency updates
+
+* rename npmjs package name from '@grupoboticario/nestjs-sap-rfc' to 'nestjs-sap-rfc' ([#188](https://github.com/grupoboticario/nestjs-sap-rfc/issues/188)) ([5131a66](https://github.com/grupoboticario/nestjs-sap-rfc/commit/5131a66c00ac4961fcf6367e79a604435711a288))
+
 ### [1.2.4](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v1.2.3...v1.2.4) (2022-02-11)
 
 
