@@ -1,3 +1,10 @@
+### [1.2.8](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v1.2.7...v1.2.8) (2022-02-16)
+
+
+### Chores
+
+* **no-release:** adding no-release scope ([0b42ffc](https://github.com/grupoboticario/nestjs-sap-rfc/commit/0b42ffc8ef1b272ddb272caba1f8ce7a973161a5))
+
 ### [1.2.7](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v1.2.6...v1.2.7) (2022-02-16)
 
 
