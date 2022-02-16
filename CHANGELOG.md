@@ -1,3 +1,10 @@
+### [1.2.6](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v1.2.5...v1.2.6) (2022-02-16)
+
+
+### Dependency updates
+
+* bump versions ([54e650f](https://github.com/grupoboticario/nestjs-sap-rfc/commit/54e650f82dca15894221e7de9a81f3d75c22e76c))
+
 ### [1.2.5](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v1.2.4...v1.2.5) (2022-02-15)
 
 
