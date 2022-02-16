@@ -6,6 +6,7 @@
       {
         "preset": "conventionalcommits",
         "releaseRules": [
+          { "scope": "no-release", "release": false },
           { "breaking": true, "release": "major" },
           { "revert": true, "release": "patch" },
           { "type": "feat", "release": "minor" },
@@ -21,7 +22,7 @@
             { "type": "docs", "section": "Docs", "hidden": false },
             {
               "type": "chore",
-              "section": "Dependency updates",
+              "section": "Chores",
               "hidden": false
             },
             { "type": "refactor", "section": "Refactor", "hidden": false }
@@ -49,7 +50,7 @@
             { "type": "docs", "section": "Docs", "hidden": false },
             {
               "type": "chore",
-              "section": "Dependency updates",
+              "section": "Chores",
               "hidden": false
             },
             { "type": "refactor", "section": "Refactor", "hidden": false }
