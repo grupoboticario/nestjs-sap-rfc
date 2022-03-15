@@ -1,3 +1,15 @@
+### [1.2.9](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v1.2.8...v1.2.9) (2022-03-15)
+
+
+### Chores
+
+* actions/setup-node -> cache: 'npm' ([e94c5e4](https://github.com/grupoboticario/nestjs-sap-rfc/commit/e94c5e41ab94920dece59fa7acaee5f37fb467c6))
+* **deps-dev:** bump versions ([a2c25d5](https://github.com/grupoboticario/nestjs-sap-rfc/commit/a2c25d5355474a48f450b022cde1974d8436fd62))
+* **deps-dev:** bump versions ([8fa4b99](https://github.com/grupoboticario/nestjs-sap-rfc/commit/8fa4b995e17be5f645622d4d6b21645fa015ce80))
+* **deps-dev:** bump versions ([1b02901](https://github.com/grupoboticario/nestjs-sap-rfc/commit/1b029014a30460cb1f416b6fb7a2ba887a36114f))
+* **deps:** bump actions/checkout from 2 to 3 ([#204](https://github.com/grupoboticario/nestjs-sap-rfc/issues/204)) ([44730b6](https://github.com/grupoboticario/nestjs-sap-rfc/commit/44730b68aae19adcd457d1181c2505be0551d346))
+* **deps:** bump actions/setup-node from 2 to 3 ([#198](https://github.com/grupoboticario/nestjs-sap-rfc/issues/198)) ([8f0b579](https://github.com/grupoboticario/nestjs-sap-rfc/commit/8f0b57900dbe4caecc505fb066ce7294617c7237))
+
 ### [1.2.8](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v1.2.7...v1.2.8) (2022-02-16)
 
 
