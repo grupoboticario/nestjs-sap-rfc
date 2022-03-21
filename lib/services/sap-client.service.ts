@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { RfcObject } from 'node-rfc';
+import { RfcCallOptions, RfcObject } from 'node-rfc';
 import { InjectSapClient } from '../inject.decorator';
 import { SapClient } from '../types';
 import { SapService } from './sap-service.interface';
@@ -19,12 +19,15 @@ export class SapClientService implements SapService {
    *
    * @param rfcName
    * @param rfcParams
+   * @param options
+   * @returns
    */
   public async execute<T extends RfcObject>(
     rfcName: string,
     rfcParams: RfcObject,
+    options?: RfcCallOptions,
   ): Promise<T> {
     await this.sapClient.open();
-    return this.sapClient.call(rfcName, rfcParams) as Promise<T>;
+    return this.sapClient.call(rfcName, rfcParams, options) as Promise<T>;
   }
 }
