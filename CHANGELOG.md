@@ -1,3 +1,20 @@
+## [1.3.0](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v1.2.9...v1.3.0) (2022-03-21)
+
+
+### Features
+
+* **service:** adding optional RfcCallOptions ([f15f911](https://github.com/grupoboticario/nestjs-sap-rfc/commit/f15f911599d125500c3f8d70c541433fc6d453ac))
+
+
+### Chores
+
+* **deps-dev:** bump versions ([603937b](https://github.com/grupoboticario/nestjs-sap-rfc/commit/603937ba43b58c43a7086da2d27fdb1541116ca2))
+
+
+### Docs
+
+* fixing links ([3a2e0ce](https://github.com/grupoboticario/nestjs-sap-rfc/commit/3a2e0ce6aaffcc7cc3e782dd794749a9c57d9a28))
+
 ### [1.2.9](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v1.2.8...v1.2.9) (2022-03-15)
 
 
