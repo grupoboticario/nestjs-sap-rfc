@@ -5,8 +5,18 @@ updates:
     schedule:
       interval: daily
       time: '08:00'
-    open-pull-requests-limit: 10
+    open-pull-requests-limit: 20
     versioning-strategy: increase
+    ignore:
+      - dependency-name: '@types/jest'
+        versions:
+          - '28.x'
+      - dependency-name: 'ts-jest'
+        versions:
+          - '28.x'
+      - dependency-name: 'jest'
+        versions:
+          - '28.x'
 
   - package-ecosystem: github-actions
     directory: '/'
