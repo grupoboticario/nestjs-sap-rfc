@@ -1,3 +1,11 @@
+### [1.3.7](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v1.3.6...v1.3.7) (2022-04-29)
+
+
+### Chores
+
+* **dependabot:** adding jest to ignore ([2a85649](https://github.com/grupoboticario/nestjs-sap-rfc/commit/2a85649efadb2dfd5f17f9067c742402f5fef8f2))
+* **deps-dev:** bump versions ([b53b40e](https://github.com/grupoboticario/nestjs-sap-rfc/commit/b53b40e287d7926f9f606240cc49b71906516958))
+
 ### [1.3.6](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v1.3.5...v1.3.6) (2022-04-29)
 
 
