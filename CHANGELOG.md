@@ -1,3 +1,10 @@
+## [1.3.10](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v1.3.9...v1.3.10) (2022-06-07)
+
+
+### Chores
+
+* npm audit fix ([f633830](https://github.com/grupoboticario/nestjs-sap-rfc/commit/f633830f685a89250f5f0237961c4046685724ce))
+
 ## [1.3.9](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v1.3.8...v1.3.9) (2022-06-07)
 
 
