@@ -1,3 +1,15 @@
+## [1.4.0](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v1.3.11...v1.4.0) (2022-06-17)
+
+
+### Features
+
+* adding try/finally ([f79282c](https://github.com/grupoboticario/nestjs-sap-rfc/commit/f79282c1419b63b01793bd0c3a442d01bd479b70))
+
+
+### Chores
+
+* bump versions ([ad4bb93](https://github.com/grupoboticario/nestjs-sap-rfc/commit/ad4bb934652f89bb2b1a6462fd36f0ae44534f84))
+
 ## [1.3.11](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v1.3.10...v1.3.11) (2022-06-07)
 
 
