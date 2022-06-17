@@ -27,11 +27,14 @@ export class SapPoolService implements SapService {
     rfcParams: RfcObject,
     options?: RfcCallOptions,
   ): Promise<T> {
-    const sapClient = (await this.sapPool.acquire()) as SapClient;
+    let sapClient: SapClient;
     try {
+      sapClient = (await this.sapPool.acquire()) as SapClient;
       return (await sapClient.call(rfcName, rfcParams, options)) as T;
     } finally {
-      await sapClient.release();
+      if (sapClient) {
+        await sapClient.release();
+      }
     }
   }
 }

@@ -27,7 +27,11 @@ export class SapClientService implements SapService {
     rfcParams: RfcObject,
     options?: RfcCallOptions,
   ): Promise<T> {
-    await this.sapClient.open();
-    return this.sapClient.call(rfcName, rfcParams, options) as Promise<T>;
+    try {
+      await this.sapClient.open();
+      return this.sapClient.call(rfcName, rfcParams, options) as Promise<T>;
+    } finally {
+      // this connection will be closed by the client or automatically
+    }
   }
 }
