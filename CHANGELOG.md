@@ -1,3 +1,15 @@
+## [2.0.0](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v1.4.0...v2.0.0) (2022-07-22)
+
+
+### ⚠ BREAKING CHANGES
+
+* upgrading to node-rfc 2.6.1
+
+### Chores
+
+* **deps:** bump semver-regex from 3.1.3 to 3.1.4 ([#316](https://github.com/grupoboticario/nestjs-sap-rfc/issues/316)) ([7055e3c](https://github.com/grupoboticario/nestjs-sap-rfc/commit/7055e3c7bfcb1daca2f22b1520fdd08bcc310498))
+* upgrading to nestjs 9 and node-rfc 2.6.1 ([#372](https://github.com/grupoboticario/nestjs-sap-rfc/issues/372)) ([c5d98bc](https://github.com/grupoboticario/nestjs-sap-rfc/commit/c5d98bc96e1e509790bfb9c7909a707c7c438a99))
+
 ## [1.4.0](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v1.3.11...v1.4.0) (2022-06-17)
 
 
