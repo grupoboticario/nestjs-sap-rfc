@@ -1,3 +1,10 @@
+## [2.0.4](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v2.0.3...v2.0.4) (2022-08-09)
+
+
+### Bug Fixes
+
+* fixing pool release ([a3e4cce](https://github.com/grupoboticario/nestjs-sap-rfc/commit/a3e4cceb4c76ce327992ee3626af2c563823ff21))
+
 ## [2.0.3](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v2.0.2...v2.0.3) (2022-08-09)
 
 
