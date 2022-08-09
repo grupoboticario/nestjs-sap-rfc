@@ -1,3 +1,10 @@
+## [2.0.5](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v2.0.4...v2.0.5) (2022-08-09)
+
+
+### Chores
+
+* upgrading to node-rfc 2.7 ([#397](https://github.com/grupoboticario/nestjs-sap-rfc/issues/397)) ([2b39c70](https://github.com/grupoboticario/nestjs-sap-rfc/commit/2b39c707c32fc9e61bb1743340140788429e97e1))
+
 ## [2.0.4](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v2.0.3...v2.0.4) (2022-08-09)
 
 
