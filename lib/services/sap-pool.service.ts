@@ -30,7 +30,7 @@ export class SapPoolService implements SapService {
     let sapClient: SapClient;
     try {
       sapClient = (await this.sapPool.acquire()) as SapClient;
-      return sapClient.call(rfcName, rfcParams, options) as Promise<T>;
+      return (await sapClient.call(rfcName, rfcParams, options)) as T;
     } finally {
       if (sapClient) {
         await sapClient.release();
