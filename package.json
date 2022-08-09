@@ -43,7 +43,7 @@
     "nodejs"
   ],
   "dependencies": {
-    "node-rfc": "^2.6.1"
+    "node-rfc": "^2.7.0"
   },
   "peerDependencies": {
     "@nestjs/common": "9.x",
