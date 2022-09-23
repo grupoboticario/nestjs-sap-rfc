@@ -37,7 +37,7 @@ describe('SapClientService', () => {
     jest.spyOn(sapClient, 'call').mockResolvedValue(mockResult);
 
     expect(await service.execute(mockRFCName, mockParams)).toEqual(mockResult);
-    expect(sapClient.open).toBeCalledTimes(1);
-    expect(sapClient.call).toBeCalledTimes(1);
+    expect(sapClient.open).toHaveBeenCalledTimes(1);
+    expect(sapClient.call).toHaveBeenCalledTimes(1);
   });
 });

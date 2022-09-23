@@ -38,8 +38,8 @@ describe('SapPoolService', () => {
     jest.spyOn(mockSapClient, 'call').mockResolvedValue(mockResult);
 
     expect(await service.execute(mockRFCName, mockParams)).toEqual(mockResult);
-    expect(mockSapPool.acquire).toBeCalledTimes(1);
-    expect(mockSapClient.call).toBeCalledTimes(1);
-    expect(mockSapClient.release).toBeCalledTimes(1);
+    expect(mockSapPool.acquire).toHaveBeenCalledTimes(1);
+    expect(mockSapClient.call).toHaveBeenCalledTimes(1);
+    expect(mockSapClient.release).toHaveBeenCalledTimes(1);
   });
 });
