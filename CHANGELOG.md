@@ -1,3 +1,10 @@
+## [3.0.7](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v3.0.6...v3.0.7) (2022-11-16)
+
+
+### Chores
+
+* **deps:** bump hashicorp/vault-action from 2.4.2 to 2.4.3 ([#528](https://github.com/grupoboticario/nestjs-sap-rfc/issues/528)) ([f8172c3](https://github.com/grupoboticario/nestjs-sap-rfc/commit/f8172c3097953d43bb43e1bf5f2428e5b7c05897))
+
 ## [3.0.6](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v3.0.5...v3.0.6) (2022-11-16)
 
 
