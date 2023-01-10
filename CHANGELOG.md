@@ -1,3 +1,13 @@
+## [3.0.10](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v3.0.9...v3.0.10) (2023-01-10)
+
+
+### Chores
+
+* bump versions ([7aa2fba](https://github.com/grupoboticario/nestjs-sap-rfc/commit/7aa2fba141b250795d0f65433de0ea252a884463))
+* **deps:** bump json5 from 2.2.1 to 2.2.3 ([#588](https://github.com/grupoboticario/nestjs-sap-rfc/issues/588)) ([5c01956](https://github.com/grupoboticario/nestjs-sap-rfc/commit/5c01956a00afce8dee5bd426f845cdc1b9f2864f))
+* removing rootDir ([83ab8ae](https://github.com/grupoboticario/nestjs-sap-rfc/commit/83ab8ae6f386a116be8974cfe79d859781dde7a1))
+* updating to node 18 ([d93d037](https://github.com/grupoboticario/nestjs-sap-rfc/commit/d93d03752659f5ea981f8aa9a323c9f3fa6087d7))
+
 ## [3.0.9](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v3.0.8...v3.0.9) (2023-01-10)
 
 
