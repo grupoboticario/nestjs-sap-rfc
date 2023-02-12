@@ -22,7 +22,7 @@
     "prepare": "is-ci || husky install",
     "prebuild": "rimraf dist",
     "build": "nest build",
-    "format": "prettier --write lib/**/*.{ts,js,json}",
+    "format": "prettier --write ./**/*.{ts,js,json}",
     "lint": "eslint lib/**/*.ts --fix",
     "test": "jest --passWithNoTests",
     "test:watch": "jest --watchAll --passWithNoTests",
