@@ -7,7 +7,10 @@
 <p align="center">NestJS SAP RFC Client</p>
 
 [![GitHub](https://img.shields.io/github/license/grupoboticario/nestjs-sap-rfc)](https://github.com/grupoboticario/nestjs-sap-rfc/blob/main/LICENSE)
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/grupoboticario/nestjs-sap-rfc/CI)](https://github.com/grupoboticario/nestjs-sap-rfc/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/grupoboticario/nestjs-sap-rfc/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/grupoboticario/nestjs-sap-rfc/actions/workflows/codeql-analysis.yml)
+[![Sonar](https://github.com/grupoboticario/nestjs-sap-rfc/actions/workflows/sonar.yml/badge.svg)](https://github.com/grupoboticario/nestjs-sap-rfc/actions/workflows/sonar.yml)
+[![CI](https://github.com/grupoboticario/nestjs-sap-rfc/actions/workflows/ci.yml/badge.svg)](https://github.com/grupoboticario/nestjs-sap-rfc/actions/workflows/ci.yml)
+[![Publish](https://github.com/grupoboticario/nestjs-sap-rfc/actions/workflows/publish.yml/badge.svg)](https://github.com/grupoboticario/nestjs-sap-rfc/actions/workflows/publish.yml)
 [![GitHub package.json version](https://img.shields.io/github/package-json/v/grupoboticario/nestjs-sap-rfc)](https://github.com/grupoboticario/nestjs-sap-rfc)
 [![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/grupoboticario/nestjs-sap-rfc/node-rfc)](https://github.com/SAP/node-rfc)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
