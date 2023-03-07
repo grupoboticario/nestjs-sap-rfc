@@ -1,3 +1,10 @@
+## [3.0.13](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v3.0.12...v3.0.13) (2023-03-07)
+
+
+### Bug Fixes
+
+* correction of lint and format commands on windows operating systems ([#649](https://github.com/grupoboticario/nestjs-sap-rfc/issues/649)) ([6022430](https://github.com/grupoboticario/nestjs-sap-rfc/commit/60224302b222e0e2958fb15cd73b94d609f81918))
+
 ## [3.0.12](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v3.0.11...v3.0.12) (2023-03-07)
 
 
