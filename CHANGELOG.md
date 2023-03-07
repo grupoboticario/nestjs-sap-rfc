@@ -1,3 +1,19 @@
+## [3.0.12](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v3.0.11...v3.0.12) (2023-03-07)
+
+
+### Docs
+
+* **README.md:** updating by [#664](https://github.com/grupoboticario/nestjs-sap-rfc/issues/664) ([eb03d4b](https://github.com/grupoboticario/nestjs-sap-rfc/commit/eb03d4b5c3fb9a9c7af31f076b607b2d199d8235))
+
+
+### Chores
+
+* adding .nvmrc ([34b162d](https://github.com/grupoboticario/nestjs-sap-rfc/commit/34b162d3f50f562d3c6041c863abe21752301c63))
+* bump version ([73b223a](https://github.com/grupoboticario/nestjs-sap-rfc/commit/73b223a4280fd4c3e2e61403020e7bfcfcb9f0eb))
+* bump versions, updating to node-rfc 2.7.1 ([e379da2](https://github.com/grupoboticario/nestjs-sap-rfc/commit/e379da2a9e8a10130172cbcf093e0587df4be9d4))
+* changing dependabot interval to weekly ([f357309](https://github.com/grupoboticario/nestjs-sap-rfc/commit/f357309f2afad3799a89aceaf0f6a777b9221979))
+* **deps:** bump hashicorp/vault-action from 2.4.3 to 2.5.0 ([#619](https://github.com/grupoboticario/nestjs-sap-rfc/issues/619)) ([4e540fc](https://github.com/grupoboticario/nestjs-sap-rfc/commit/4e540fc01f6e935b156a11c566f3bb5b5e6df2a3))
+
 ## [3.0.11](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v3.0.10...v3.0.11) (2023-01-17)
 
 
