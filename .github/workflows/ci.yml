@@ -7,11 +7,17 @@ on:
   push:
     branches: [main]
     paths-ignore:
-      - '**.md'
+      - '**/*.md'
+      - '**/*.yml'
+      - '**/*.yaml'
+      - .github/**
   pull_request:
     branches: [main]
     paths-ignore:
-      - '**.md'
+      - '**/*.md'
+      - '**/*.yml'
+      - '**/*.yaml'
+      - .github/**
 
 jobs:
   build:
