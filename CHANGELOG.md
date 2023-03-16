@@ -1,3 +1,15 @@
+## [3.0.14](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v3.0.13...v3.0.14) (2023-03-16)
+
+
+### Bug Fixes
+
+* fixing non-SAP RFC options ([#692](https://github.com/grupoboticario/nestjs-sap-rfc/issues/692)) ([29536cf](https://github.com/grupoboticario/nestjs-sap-rfc/commit/29536cfedfdf1acfa6461a479bfbb9e6f3ba4257))
+
+
+### Docs
+
+* updating badges ([5c5f8f4](https://github.com/grupoboticario/nestjs-sap-rfc/commit/5c5f8f45d57eeea57523aea649590ad60f2a38f0))
+
 ## [3.0.13](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v3.0.12...v3.0.13) (2023-03-07)
 
 
