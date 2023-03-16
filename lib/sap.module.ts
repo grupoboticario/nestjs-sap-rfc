@@ -21,19 +21,16 @@ import { SapPoolService } from './services/sap-pool.service';
 @Module({})
 export class SapModule {
   static createPool(options: SapModulePoolConnectionOptions) {
-    const { name, isGlobal } = options;
-
-    delete options.name;
-    delete options.isGlobal;
+    const { name, isGlobal, ...poolConfiguration } = options;
 
     const poolConnectionOptions = {
       provide: SAP_POOL_CONNECTION_OPTIONS,
-      useValue: options,
+      useValue: poolConfiguration,
     };
 
     const poolProvider = {
       provide: SAP_POOL,
-      useValue: new Pool(options),
+      useValue: new Pool(poolConfiguration),
     };
 
     const serviceProvider = {
@@ -99,19 +96,16 @@ export class SapModule {
   }
 
   static createClient(options: SapModuleConnectionOptions) {
-    const { name, isGlobal } = options;
-
-    delete options.name;
-    delete options.isGlobal;
+    const { name, isGlobal, ...connectionParameters } = options;
 
     const connectionOptions = {
       provide: SAP_CONNECTION_OPTIONS,
-      useValue: options,
+      useValue: connectionParameters,
     };
 
     const clientProvider = {
       provide: SAP_CLIENT,
-      useValue: new Client(options),
+      useValue: new Client(connectionParameters),
     };
 
     const serviceProvider = {
