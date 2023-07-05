@@ -15,8 +15,7 @@ import {
   SapModuleConnectionOptions,
   SapModulePoolConnectionOptions,
 } from './sap.interface';
-import { SapClientService } from './services';
-import { SapPoolService } from './services/sap-pool.service';
+import { SapClientService, SapPoolService } from './services';
 
 @Module({})
 export class SapModule {
