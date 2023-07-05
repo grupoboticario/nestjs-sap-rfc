@@ -1,3 +1,17 @@
+## [3.0.19](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v3.0.18...v3.0.19) (2023-07-05)
+
+
+### Chores
+
+* **deps:** bump hashicorp/vault-action from 2.5.0 to 2.6.0 ([#780](https://github.com/grupoboticario/nestjs-sap-rfc/issues/780)) ([69590f5](https://github.com/grupoboticario/nestjs-sap-rfc/commit/69590f537bf1c8e26fbf02bf5aaa3af7ccc859c8))
+* **deps:** bump hashicorp/vault-action from 2.6.0 to 2.7.0 ([#793](https://github.com/grupoboticario/nestjs-sap-rfc/issues/793)) ([be584ea](https://github.com/grupoboticario/nestjs-sap-rfc/commit/be584eac269fcff5bce659c44663d32475800e94))
+* upgrading to NestJS 10 ([#809](https://github.com/grupoboticario/nestjs-sap-rfc/issues/809)) ([6c082b9](https://github.com/grupoboticario/nestjs-sap-rfc/commit/6c082b98292bdcd8268bbfc2d50425efdf28c68e))
+
+
+### Refactor
+
+* changing import ([c3faf52](https://github.com/grupoboticario/nestjs-sap-rfc/commit/c3faf522b5d1e371a45702117a8bd2ba6a713292))
+
 ## [3.0.18](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v3.0.17...v3.0.18) (2023-06-14)
 
 
