@@ -1,3 +1,10 @@
+## [3.0.20](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v3.0.19...v3.0.20) (2023-07-06)
+
+
+### Chores
+
+* upgrading lockfileVersion version ([416a1fa](https://github.com/grupoboticario/nestjs-sap-rfc/commit/416a1faf56926119c3f47f514c522852012221d9))
+
 ## [3.0.19](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v3.0.18...v3.0.19) (2023-07-05)
 
 
