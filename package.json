@@ -54,7 +54,7 @@
     "@commitlint/cli": "^17.6.6",
     "@commitlint/config-conventional": "^17.6.6",
     "@compodoc/compodoc": "^1.1.21",
-    "@nestjs/cli": "^10.1.7",
+    "@nestjs/cli": "^10.1.9",
     "@nestjs/common": "^10.0.5",
     "@nestjs/core": "^10.0.5",
     "@nestjs/schematics": "^10.0.1",
