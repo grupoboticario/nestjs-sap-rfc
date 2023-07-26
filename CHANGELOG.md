@@ -1,3 +1,10 @@
+## [3.0.22](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v3.0.21...v3.0.22) (2023-07-26)
+
+
+### Chores
+
+* **deps-dev:** bump word-wrap from 1.2.3 to 1.2.4 ([#827](https://github.com/grupoboticario/nestjs-sap-rfc/issues/827)) ([16f5029](https://github.com/grupoboticario/nestjs-sap-rfc/commit/16f5029888fa9f462a33ad0f4f70fd40b4ff9a9d))
+
 ## [3.0.21](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v3.0.20...v3.0.21) (2023-07-26)
 
 
