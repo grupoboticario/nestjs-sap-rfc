@@ -1,3 +1,12 @@
+## [3.0.29](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v3.0.28...v3.0.29) (2023-11-22)
+
+
+### Chores
+
+* bump versions ([0a3d0ca](https://github.com/grupoboticario/nestjs-sap-rfc/commit/0a3d0cac9f8298c2caa662461c9ce3d38ec68f1e))
+* **deps:** bump actions/setup-node from 3 to 4 ([#939](https://github.com/grupoboticario/nestjs-sap-rfc/issues/939)) ([a0768d8](https://github.com/grupoboticario/nestjs-sap-rfc/commit/a0768d8bd737e47744362029c3cc5309e193e489))
+* **deps:** bump hashicorp/vault-action from 2.7.3 to 2.7.4 ([#940](https://github.com/grupoboticario/nestjs-sap-rfc/issues/940)) ([4e922c8](https://github.com/grupoboticario/nestjs-sap-rfc/commit/4e922c8d48a5e34713c77897c393df3bb1208d24))
+
 ## [3.0.28](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v3.0.27...v3.0.28) (2023-11-16)
 
 
