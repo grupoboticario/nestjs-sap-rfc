@@ -1,3 +1,10 @@
+## [3.0.32](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v3.0.31...v3.0.32) (2023-12-11)
+
+
+### Chores
+
+* adding test to .gitignore ([25555a3](https://github.com/grupoboticario/nestjs-sap-rfc/commit/25555a33a85a91d645f62a4ad8347a78246f0ffb))
+
 ## [3.0.31](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v3.0.30...v3.0.31) (2023-12-11)
 
 
