@@ -35,3 +35,6 @@ lerna-debug.log*
 
 # Doc
 /documentation
+
+#Test
+/test/
