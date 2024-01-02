@@ -16,5 +16,8 @@
   },
   "[CODEOWNERS]": {
     "editor.formatOnSave": false
+  },
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
   }
 }

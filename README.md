@@ -145,7 +145,12 @@ import { Module } from '@nestjs/common';
     SapModule.createClient({
       isGlobal: true, // for global module
       name: 'service_name', // for multiple modules (OPTIONAL)
-      /* ...RfcConnectionParameters */
+      connectionParameters: {
+        /* see RfcConnectionParameters */
+      },
+      clientOptions: {
+        /* see RfcClientOptions */
+      },
     }),
   ],
 })
@@ -165,7 +170,12 @@ import { Module } from '@nestjs/common';
       name: 'service_name', // for multiple modules (OPTIONAL)
       useFactory: () => {
         return {
-          /* ...RfcConnectionParameters */
+          connectionParameters: {
+            /* see RfcConnectionParameters */
+          },
+          clientOptions: {
+            /* see RfcClientOptions */
+          },
         };
       },
     }),
@@ -188,7 +198,12 @@ import { ConfigService } from '@nestjs/config';
       name: 'service_name', // for multiple modules (OPTIONAL)
       useFactory: (config: ConfigService) => {
         return {
-          /* ...RfcConnectionParameters */
+          connectionParameters: {
+            /* see RfcConnectionParameters */
+          },
+          clientOptions: {
+            /* see RfcClientOptions */
+          },
         };
       },
       inject: [ConfigService],
@@ -201,12 +216,7 @@ export class AppModule {}
 Inject SapService
 
 ```ts
-import {
-  InjectSapService,
-  SapService,
-  SapRfcObject,
-  SapRfcStructure,
-} from 'nestjs-sap-rfc';
+import { InjectSapService, SapService, SapRfcObject, SapRfcStructure } from 'nestjs-sap-rfc';
 import { Injectable } from '@nestjs/common';
 
 // RfcStructure
@@ -247,12 +257,7 @@ export class MyService {
 Inject SapService by name
 
 ```ts
-import {
-  InjectSapService,
-  SapService,
-  SapRfcObject,
-  SapRfcStructure,
-} from 'nestjs-sap-rfc';
+import { InjectSapService, SapService, SapRfcObject, SapRfcStructure } from 'nestjs-sap-rfc';
 import { Inject } from '@nestjs/common';
 
 // RfcStructure

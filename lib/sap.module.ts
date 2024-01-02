@@ -95,7 +95,7 @@ export class SapModule {
   }
 
   static createClient(options: SapModuleConnectionOptions) {
-    const { name, isGlobal, ...connectionParameters } = options;
+    const { name, isGlobal, connectionParameters, clientOptions } = options;
 
     const connectionOptions = {
       provide: SAP_CONNECTION_OPTIONS,
@@ -104,7 +104,7 @@ export class SapModule {
 
     const clientProvider = {
       provide: SAP_CLIENT,
-      useValue: new Client(connectionParameters),
+      useValue: new Client(connectionParameters, clientOptions),
     };
 
     const serviceProvider = {
@@ -131,7 +131,8 @@ export class SapModule {
 
     const clientProvider = {
       provide: SAP_CLIENT,
-      useFactory: (opts: SapModuleConnectionOptions) => new Client(opts),
+      useFactory: (opts: SapModuleConnectionOptions) =>
+        new Client(opts?.connectionParameters, opts?.clientOptions),
       inject: [SAP_CONNECTION_OPTIONS],
     };
 

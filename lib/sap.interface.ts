@@ -1,12 +1,12 @@
 import { ModuleMetadata } from '@nestjs/common/interfaces';
-import { RfcConnectionParameters, RfcPoolConfiguration } from 'node-rfc';
+import { RfcClientConfig, RfcPoolConfiguration } from 'node-rfc';
 
 export interface SapModulePoolConnectionOptions extends RfcPoolConfiguration {
   isGlobal?: boolean;
   name?: string;
 }
 
-export interface SapModuleConnectionOptions extends RfcConnectionParameters {
+export interface SapModuleConnectionOptions extends RfcClientConfig {
   isGlobal?: boolean;
   name?: string;
 }
@@ -26,7 +26,5 @@ export interface SapModuleAsyncConnectionOptions
   inject?: any[];
   isGlobal?: boolean;
   name?: string;
-  useFactory?: (
-    ...args: any[]
-  ) => Promise<RfcConnectionParameters> | RfcConnectionParameters;
+  useFactory?: (...args: any[]) => Promise<RfcClientConfig> | RfcClientConfig;
 }
