@@ -405,6 +405,6 @@ Use `npm run commit` instead of `git commit` to use commitizen.
 The following improvements are currently in progress:
 
 - [x] Dynamic Configuration
-- [x] TransactionTransaction with auto commit and rollback
+- [x] Transaction with auto commit and rollback
 - [x] Resource injection by name
 - [x] Update to node-rfc 3.x
