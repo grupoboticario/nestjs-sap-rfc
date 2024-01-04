@@ -7,7 +7,6 @@ import {
 import { InjectSapClient } from '../inject.decorator';
 import { SapClient } from '../types';
 import { SapService } from './sap-service.interface';
-import { SapTransactionService } from './sap-transaction.serivce';
 
 @Injectable()
 export class SapClientService implements SapService {
@@ -51,13 +50,11 @@ export class SapClientService implements SapService {
    * @returns
    */
   public async transaction<T>(
-    runInTransaction: (sapService: SapService) => Promise<T>,
+    runInTransaction: (sapClient: SapClient) => Promise<T>,
   ): Promise<T> {
     try {
       await this.sapClient.open();
-      const result = await runInTransaction(
-        new SapTransactionService(this.sapClient),
-      );
+      const result = await runInTransaction(this.sapClient);
       await this.sapClient.call(BAPI_TRANSACTION_COMMIT, {});
       return result;
     } catch (err: any) {
