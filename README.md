@@ -258,7 +258,7 @@ Inject SapService by name
 
 ```ts
 import { InjectSapService, SapService, SapRfcObject, SapRfcStructure } from 'nestjs-sap-rfc';
-import { Inject } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 
 // RfcStructure
 type PositionData = SapRfcStructure; // SAP structure
@@ -283,7 +283,7 @@ export class MyService {
    * @param {SapService} sapService
    */
   constructor(
-    @Inject('service_name')
+    @InjectSapService('service_name')
     private readonly sapService: SapService,
   ) {}
 
@@ -294,6 +294,78 @@ export class MyService {
   }
 }
 ```
+
+### Creating and using transactions
+
+Transactions are created using SapService. Example:
+
+```ts
+import { InjectSapService, SapService, SapRfcObject, SapRfcStructure } from 'nestjs-sap-rfc';
+import { Injectable } from '@nestjs/common';
+
+// RfcStructure
+type PositionData = SapRfcStructure; // SAP structure
+
+// RfcStructure
+interface NestedData extends SapRfcStructure {
+  readonly E_NESTED?: string; // SAP field name
+}
+
+// MySapInterface
+interface MySapInterface extends SapRfcObject {
+  readonly E_NAME?: string; // SAP field name
+  readonly E_DATA?: PositionData; // SAP field name
+  readonly E_DATA2?: NestedData; // SAP field name
+  readonly E_ERROR?: string; // SAP field name
+  readonly I_OBJID?: string; // SAP field name
+}
+
+@Injectable()
+export class MyService {
+  /**
+   * @param {SapService} sapService
+   */
+  constructor(
+    @InjectSapService()
+    private readonly sapService: SapService,
+  ) {}
+
+  public async runTransaction(): MySapInterface {
+    await this.sapService.transaction(async (sapClient: SapClient) => {
+      // call rfcs using sapClient
+    });
+  }
+}
+```
+
+> Everything you want to run in a transaction must be executed in a callback:
+
+```ts
+@Injectable()
+export class MyService {
+  /**
+   * @param {SapService} sapService
+   */
+  constructor(
+    @InjectSapService()
+    private readonly sapService: SapService,
+  ) {}
+
+  public async runTransaction(): MySapInterface {
+    await this.sapService.transaction(async (sapClient: SapClient) => {
+      await sapClient.call('rfcName_1', {
+        ...rfcParams,
+      });
+      await sapClient.call('rfcName_2', {
+        ...rfcParams,
+      });
+    });
+  }
+}
+```
+
+> The most important restriction when working in a transaction is to ALWAYS use the provided instance of SapClient.
+> All operations MUST be executed using the provided SapClient.
 
 ## ✅ Test
 
@@ -333,3 +405,6 @@ Use `npm run commit` instead of `git commit` to use commitizen.
 The following improvements are currently in progress:
 
 - [x] Dynamic Configuration
+- [x] TransactionTransaction with auto commit and rollback
+- [x] Resource injection by name
+- [x] Update to node-rfc 3.x
