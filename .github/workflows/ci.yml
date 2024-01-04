@@ -31,8 +31,11 @@ jobs:
           node-version: 20
           cache: 'npm'
 
-      - name: Setup node-gyp
-        run: npm install -g node-gyp
+      - name: Setup SAP RFC SDK
+        uses: grupoboticario/actions-setup-sap-rfc@v1
+        with:
+          github-token: ${{ secrets.GH_TOKEN }}
+          patch-level: '11'
 
       - name: Install dependencies
         run: npm ci
