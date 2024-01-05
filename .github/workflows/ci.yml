@@ -32,7 +32,7 @@ jobs:
           cache: 'npm'
 
       - name: Setup SAP RFC SDK
-        uses: grupoboticario/actions-setup-sap-rfc@v1
+        uses: ./.github/actions/actions-setup-sap-rfc
         with:
           github-token: ${{ secrets.GH_TOKEN }}
           patch-level: '11'
