@@ -2,4 +2,4 @@
 /dist
 /coverage
 /documentation
-.dockerfiles
+/dockerfiles
