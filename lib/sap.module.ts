@@ -1,7 +1,7 @@
 /* istanbul ignore file */
 
 import { DynamicModule, Module } from '@nestjs/common';
-import { Client, Pool } from 'node-rfc';
+import { Client, Pool, RfcClientConfig } from 'node-rfc';
 import {
   SAP_CLIENT,
   SAP_CONNECTION_OPTIONS,
@@ -9,6 +9,7 @@ import {
   SAP_POOL_CONNECTION_OPTIONS,
   SAP_SERVICE,
 } from './constants';
+import { createToken } from './create-token';
 import {
   SapModuleAsyncConnectionOptions,
   SapModuleAsyncPoolConnectionOptions,
@@ -23,12 +24,12 @@ export class SapModule {
     const { name, isGlobal, ...poolConfiguration } = options;
 
     const poolConnectionOptions = {
-      provide: SAP_POOL_CONNECTION_OPTIONS,
+      provide: createToken(name, SAP_POOL_CONNECTION_OPTIONS),
       useValue: poolConfiguration,
     };
 
     const poolProvider = {
-      provide: SAP_POOL,
+      provide: createToken(name, SAP_POOL),
       useValue: new Pool(poolConfiguration),
     };
 
@@ -58,16 +59,21 @@ export class SapModule {
   static createPoolAsync(
     options: SapModuleAsyncPoolConnectionOptions,
   ): DynamicModule {
+    const poolConnectionOptionsToken = createToken(
+      options.name,
+      SAP_POOL_CONNECTION_OPTIONS,
+    );
+
     const poolConnectionOptions = {
-      provide: SAP_POOL_CONNECTION_OPTIONS,
+      provide: poolConnectionOptionsToken,
       useFactory: options.useFactory,
       inject: options.inject || [],
     };
 
     const poolProvider = {
-      provide: SAP_POOL,
+      provide: createToken(options.name, SAP_POOL),
       useFactory: (opts: SapModulePoolConnectionOptions) => new Pool(opts),
-      inject: [SAP_POOL_CONNECTION_OPTIONS],
+      inject: [poolConnectionOptionsToken],
     };
 
     const serviceProvider = {
@@ -95,16 +101,21 @@ export class SapModule {
   }
 
   static createClient(options: SapModuleConnectionOptions) {
-    const { name, isGlobal, ...connectionParameters } = options;
+    const { name, isGlobal, connectionParameters, clientOptions } = options;
+
+    const clientConfiguration = {
+      connectionParameters,
+      clientOptions,
+    } as RfcClientConfig;
 
     const connectionOptions = {
-      provide: SAP_CONNECTION_OPTIONS,
-      useValue: connectionParameters,
+      provide: createToken(name, SAP_CONNECTION_OPTIONS),
+      useValue: clientConfiguration,
     };
 
     const clientProvider = {
-      provide: SAP_CLIENT,
-      useValue: new Client(connectionParameters),
+      provide: createToken(name, SAP_CLIENT),
+      useValue: new Client(connectionParameters, clientOptions),
     };
 
     const serviceProvider = {
@@ -123,16 +134,22 @@ export class SapModule {
   static createClientAsync(
     options: SapModuleAsyncConnectionOptions,
   ): DynamicModule {
+    const connectionOptionsToken = createToken(
+      options.name,
+      SAP_CONNECTION_OPTIONS,
+    );
+
     const connectionOptions = {
-      provide: SAP_CONNECTION_OPTIONS,
+      provide: connectionOptionsToken,
       useFactory: options.useFactory,
       inject: options.inject || [],
     };
 
     const clientProvider = {
-      provide: SAP_CLIENT,
-      useFactory: (opts: SapModuleConnectionOptions) => new Client(opts),
-      inject: [SAP_CONNECTION_OPTIONS],
+      provide: createToken(options.name, SAP_CLIENT),
+      useFactory: (opts: SapModuleConnectionOptions) =>
+        new Client(opts?.connectionParameters, opts?.clientOptions),
+      inject: [connectionOptionsToken],
     };
 
     const serviceProvider = {

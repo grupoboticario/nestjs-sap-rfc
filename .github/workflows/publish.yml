@@ -12,6 +12,13 @@ jobs:
           node-version: 20
           cache: 'npm'
           registry-url: https://registry.npmjs.org/
+
+      - name: Setup SAP RFC SDK
+        uses: ./.github/actions/actions-setup-sap-rfc
+        with:
+          github-token: ${{ secrets.GH_TOKEN }}
+          patch-level: '11'
+
       - run: npm ci
       - run: npm run build
       - run: npm publish

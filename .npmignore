@@ -18,3 +18,4 @@ CONTRIBUTING.md
 .lintstagedrc
 .releaserc.json
 .eslintignore
+/dockerfiles

@@ -1,9 +1,14 @@
+import { Logger } from '@nestjs/common';
 import { Test, TestingModule } from '@nestjs/testing';
-import { SAP_CLIENT } from '../constants';
+import {
+  BAPI_TRANSACTION_COMMIT,
+  BAPI_TRANSACTION_ROLLBACK,
+  SAP_CLIENT,
+} from '../constants';
 import {
   mockParams,
-  mockResult,
   mockRFCName,
+  mockResult,
   mockSapClient,
 } from '../sap.mock';
 import { SapClient } from '../types';
@@ -37,11 +42,11 @@ describe('SapClientService', () => {
     expect(sapClient).toBeDefined();
   });
 
-  it('SAP_CLIENT is initialized correctly', () => {
+  it('should be SAP_CLIENT initialized correctly', () => {
     expect(sapClient).toEqual(mockSapClient);
   });
 
-  it('call RFC successfully', async () => {
+  it('should be call RFC successfully', async () => {
     jest.spyOn(sapClient, 'call').mockResolvedValue(mockResult);
 
     expect(await service.execute(mockRFCName, mockParams)).toEqual(mockResult);
@@ -49,13 +54,18 @@ describe('SapClientService', () => {
     expect(sapClient.call).toHaveBeenCalledTimes(1);
   });
 
-  it('call RFC with valid parameters', async () => {
+  it('should be call RFC with valid parameters', async () => {
     jest.spyOn(sapClient, 'call').mockResolvedValue(mockResult);
 
-    const result = await service.execute(mockRFCName, mockParams);
+    const result = await service.execute(mockRFCName, mockParams, {
+      timeout: 1000,
+    });
     expect(result).toEqual(mockResult);
     expect(sapClient.open).toHaveBeenCalledTimes(1);
     expect(sapClient.call).toHaveBeenCalledTimes(1);
+    expect(sapClient.call).toHaveBeenCalledWith(mockRFCName, mockParams, {
+      timeout: 1000,
+    });
   });
 
   it('throws an error when call RFC fails', async () => {
@@ -67,5 +77,65 @@ describe('SapClientService', () => {
 
     expect(sapClient.open).toHaveBeenCalledTimes(1);
     expect(sapClient.call).toHaveBeenCalledTimes(1);
+  });
+
+  it('should be call auto commit transaction successfully', async () => {
+    jest.spyOn(sapClient, 'call').mockResolvedValue(mockResult);
+
+    const result = await service.transaction(async (sapClient: SapClient) => {
+      const response = await sapClient.call(mockRFCName, mockParams);
+      return response;
+    });
+
+    expect(result).toEqual(mockResult);
+
+    expect(sapClient.open).toHaveBeenCalledTimes(1);
+    expect(sapClient.call).toHaveBeenCalledTimes(2);
+    expect(sapClient.call).toHaveBeenCalledWith(mockRFCName, mockParams);
+    expect(sapClient.call).toHaveBeenCalledWith(BAPI_TRANSACTION_COMMIT, {});
+  });
+
+  it('should be call a rollback when a transaction fails', async () => {
+    jest.spyOn(sapClient, 'call').mockImplementation((rfcName) => {
+      if (rfcName === mockRFCName) {
+        throw new Error('Rollback should be called');
+      }
+
+      return undefined;
+    });
+
+    await expect(
+      service.transaction(async (sapClient: SapClient) => {
+        await sapClient.call(mockRFCName, mockParams);
+      }),
+    ).rejects.toThrow('Rollback should be called');
+
+    expect(sapClient.open).toHaveBeenCalledTimes(1);
+    expect(sapClient.call).toHaveBeenCalledTimes(2);
+    expect(sapClient.call).toHaveBeenCalledWith(mockRFCName, mockParams);
+    expect(sapClient.call).toHaveBeenCalledWith(BAPI_TRANSACTION_ROLLBACK, {});
+  });
+
+  it('throws an error when call rollback transaction', async () => {
+    const errorSpy = jest.spyOn(Logger.prototype, 'error');
+
+    jest
+      .spyOn(sapClient, 'call')
+      .mockRejectedValue(new Error('Rollback fails'));
+
+    await expect(
+      service.transaction(async (sapClient: SapClient) => {
+        await sapClient.call(mockRFCName, mockParams);
+      }),
+    ).rejects.toThrow('Rollback fails');
+
+    expect(sapClient.open).toHaveBeenCalledTimes(1);
+    expect(sapClient.call).toHaveBeenCalledTimes(2);
+    expect(sapClient.call).toHaveBeenCalledWith(mockRFCName, mockParams);
+    expect(sapClient.call).toHaveBeenCalledWith(BAPI_TRANSACTION_ROLLBACK, {});
+    expect(errorSpy).toHaveBeenCalledWith(
+      'Failed to rollback transaction',
+      Error('Rollback fails'),
+    );
   });
 });

@@ -1,13 +1,18 @@
+import { Logger } from '@nestjs/common';
 import { Test, TestingModule } from '@nestjs/testing';
-import { SAP_POOL } from '../constants';
+import {
+  BAPI_TRANSACTION_COMMIT,
+  BAPI_TRANSACTION_ROLLBACK,
+  SAP_POOL,
+} from '../constants';
 import {
   mockParams,
-  mockResult,
   mockRFCName,
+  mockResult,
   mockSapClient,
   mockSapPool,
 } from '../sap.mock';
-import { SapPool } from '../types';
+import { SapClient, SapPool } from '../types';
 import { SapPoolService } from './sap-pool.service';
 
 describe('SapPoolService', () => {
@@ -38,11 +43,11 @@ describe('SapPoolService', () => {
     expect(sapPool).toBeDefined();
   });
 
-  it('SAP_POOL is initialized correctly', () => {
+  it('should be SAP_POOL initialized correctly', () => {
     expect(sapPool).toEqual(mockSapPool);
   });
 
-  it('call RFC successfully', async () => {
+  it('should be call RFC successfully', async () => {
     jest.spyOn(mockSapClient, 'call').mockResolvedValue(mockResult);
 
     expect(await service.execute(mockRFCName, mockParams)).toEqual(mockResult);
@@ -51,14 +56,19 @@ describe('SapPoolService', () => {
     expect(mockSapClient.release).toHaveBeenCalledTimes(1);
   });
 
-  it('call RFC with valid parameters', async () => {
+  it('should be call RFC with valid parameters', async () => {
     jest.spyOn(mockSapClient, 'call').mockResolvedValue(mockResult);
 
-    const result = await service.execute(mockRFCName, mockParams);
+    const result = await service.execute(mockRFCName, mockParams, {
+      timeout: 1000,
+    });
     expect(result).toEqual(mockResult);
     expect(mockSapPool.acquire).toHaveBeenCalledTimes(1);
     expect(mockSapClient.call).toHaveBeenCalledTimes(1);
     expect(mockSapClient.release).toHaveBeenCalledTimes(1);
+    expect(mockSapClient.call).toHaveBeenCalledWith(mockRFCName, mockParams, {
+      timeout: 1000,
+    });
   });
 
   it('throws an error when call RFC fails', async () => {
@@ -73,5 +83,52 @@ describe('SapPoolService', () => {
     expect(mockSapPool.acquire).toHaveBeenCalledTimes(1);
     expect(mockSapClient.call).toHaveBeenCalledTimes(1);
     expect(mockSapClient.release).toHaveBeenCalledTimes(1);
+  });
+
+  it('should be call auto commit transaction successfully', async () => {
+    jest.spyOn(mockSapClient, 'call').mockResolvedValue(mockResult);
+
+    const result = await service.transaction(async (sapClient: SapClient) => {
+      const response = await sapClient.call(mockRFCName, mockParams);
+      return response;
+    });
+
+    expect(result).toEqual(mockResult);
+
+    expect(mockSapPool.acquire).toHaveBeenCalledTimes(1);
+    expect(mockSapClient.call).toHaveBeenCalledTimes(2);
+    expect(mockSapClient.release).toHaveBeenCalledTimes(1);
+    expect(mockSapClient.call).toHaveBeenCalledWith(mockRFCName, mockParams);
+    expect(mockSapClient.call).toHaveBeenCalledWith(
+      BAPI_TRANSACTION_COMMIT,
+      {},
+    );
+  });
+
+  it('throws an error when call rollback transaction', async () => {
+    const errorSpy = jest.spyOn(Logger.prototype, 'error');
+
+    jest
+      .spyOn(mockSapClient, 'call')
+      .mockRejectedValue(new Error('Rollback fails'));
+
+    await expect(
+      service.transaction(async (sapClient: SapClient) => {
+        await sapClient.call(mockRFCName, mockParams);
+      }),
+    ).rejects.toThrow('Rollback fails');
+
+    expect(mockSapPool.acquire).toHaveBeenCalledTimes(1);
+    expect(mockSapClient.call).toHaveBeenCalledTimes(2);
+    expect(mockSapClient.release).toHaveBeenCalledTimes(1);
+    expect(mockSapClient.call).toHaveBeenCalledWith(mockRFCName, mockParams);
+    expect(mockSapClient.call).toHaveBeenCalledWith(
+      BAPI_TRANSACTION_ROLLBACK,
+      {},
+    );
+    expect(errorSpy).toHaveBeenCalledWith(
+      'Failed to rollback transaction',
+      Error('Rollback fails'),
+    );
   });
 });
