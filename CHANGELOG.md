@@ -1,3 +1,21 @@
+## [4.0.0](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v3.0.33...v4.0.0) (2024-01-05)
+
+
+### ⚠ BREAKING CHANGES
+
+* upgrading to node-rfc 3.x
+* refactor createClient(Async) connection properties (connectionParameters, clientOptions)
+feat: adding transaction method
+
+### Features
+
+* adding transaction method and upgrading to node-rfc 3.x ([#1006](https://github.com/grupoboticario/nestjs-sap-rfc/issues/1006)) ([8ce0676](https://github.com/grupoboticario/nestjs-sap-rfc/commit/8ce067682cffc92849daaba93565d9acfb49e43d))
+
+
+### Chores
+
+* **deps:** bump github/codeql-action from 2 to 3 ([#989](https://github.com/grupoboticario/nestjs-sap-rfc/issues/989)) ([8036ce4](https://github.com/grupoboticario/nestjs-sap-rfc/commit/8036ce45cd1d8d026e7aee925545e2348ac534e7))
+
 ## [3.0.33](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v3.0.32...v3.0.33) (2023-12-11)
 
 
