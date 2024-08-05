@@ -8,49 +8,47 @@ on:
       - '**/*.md'
       - '**/*.yml'
       - '**/*.yaml'
-      - .github/**
+      - '.github/**'
   pull_request:
-    types: [opened, synchronize, reopened]
+    branches:
+      - main
     paths-ignore:
       - '**/*.md'
       - '**/*.yml'
       - '**/*.yaml'
-      - .github/**
+      - '.github/**'
+  workflow_dispatch:
 
 jobs:
-  sonarCloudTrigger:
-    name: SonarCloud Trigger
-    runs-on: ubuntu-latest
+  sonarAnalysis:
+    name: Sonar Analysis
+    runs-on: [ubuntu-latest]
     if: ${{ github.actor != 'dependabot[bot]' }}
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
           # Disabling shallow clone is recommended for improving relevancy of reporting
           fetch-depth: 0
-      - uses: actions/setup-node@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: 20
-          cache: 'npm'
-
+          cache: npm
+          node-version-file: .nvmrc
       - name: Setup SAP RFC SDK
         uses: ./.github/actions/actions-setup-sap-rfc
         with:
-          github-token: ${{ secrets.GH_TOKEN }}
-          patch-level: '11'
-
+          token: ${{ secrets.GH_TOKEN }}
       - name: Install dependencies
         run: npm ci
-
       - name: Build
         run: npm run build
-
       - name: Test
         run: npm run test:cov
         env:
           CI: true
-
       - name: SonarCloud Scan
-        uses: sonarsource/sonarcloud-github-action@master
+        uses: grupoboticario/actions-ci-sonarcloud@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONARCLOUD_TOKEN }}

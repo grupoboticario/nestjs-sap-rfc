@@ -1,61 +1,35 @@
-name: 'Setup SAP RFC environment'
-description: 'Setup a SAP RFC environment by installing the SDK.'
+name: Setup SAP RFC
+description: Setup a SAP RFC environment by installing the SDK
 
 inputs:
-  github-token:
-    required: true
-    description: 'The Github PAT (personal access token)'
   os:
-    required: false
-    description: 'System Operation (only supports for linux)'
+    description: 'Operating System (only supports linux)'
     default: 'linux'
-  sdk-version:
     required: false
-    description: 'RFC SDK version (only supports for 750)'
-    default: '750'
   patch-level:
-    required: false
-    description: 'RFC SDK patch level (only supports for 10)'
+    description: 'RFC SDK patch level (only supports 11)'
     default: '11'
+    required: false
+  sdk-version:
+    description: 'RFC SDK version (only supports 750)'
+    default: '750'
+    required: false
+  token:
+    description: 'GitHub PAT'
+    required: true
 
 runs:
-  using: 'composite'
+  using: composite
   steps:
-    - name: Checkout Setup SAP RFC SDK
+    - name: Checkout
       uses: actions/checkout@v4
       with:
         repository: grupoboticario/actions-setup-sap-rfc
         path: setup-sap-rfc-sdk
-        token: ${{ inputs.github-token }}
-
-    - name: Setup SAP RFC SDK
-      shell: bash
-      if: ${{ inputs.os == 'linux' }}
-      run: |
-        echo "Listing contents..."
-        ls -l
-
-        echo "Listing SAP RFC SDK contents..."
-        ls -l $SETUP_SAP_RFC_SDK_DIR
-
-        echo "Copying nwrfcsdk.conf..."
-        sudo cp $SETUP_SAP_RFC_SDK_DIR/assets/nwrfcsdk.conf /etc/ld.so.conf.d/
-        ls -l /etc/ld.so.conf.d/
-
-        echo "Unziping nwrfc${{ inputs.sdk-version }}P_${{ inputs.patch-level }}_${{ inputs.os }}.zip..."
-        sudo unzip -o $SETUP_SAP_RFC_SDK_DIR/assets/nwrfc${{ inputs.sdk-version }}P_${{ inputs.patch-level }}_${{ inputs.os }}.zip -d /usr/local/sap
-        ls -l /usr/local/sap
-
-        echo "Exporting SAPNWRFC_HOME..."
-        export SAPNWRFC_HOME=/usr/local/sap/nwrfcsdk
-        echo $SAPNWRFC_HOME
-
-        echo "Running ldconfig..."
-        sudo ldconfig
-
-        echo "Removing SAP RFC SDK contents..."
-        rm -rf $SETUP_SAP_RFC_SDK_DIR
-
-        echo "SAP RFC SDK ${{ inputs.sdk-version }}P_${{ inputs.patch-level }}_${{ inputs.os }} has been successfully configured!!!"
-      env:
-        SETUP_SAP_RFC_SDK_DIR: setup-sap-rfc-sdk
+        token: ${{ inputs.token }}
+    - name: Run Action
+      uses: ./setup-sap-rfc-sdk
+      with:
+        os: ${{ inputs.os }}
+        patch-level: ${{ inputs.patch-level }}
+        sdk-version: ${{ inputs.sdk-version }}
