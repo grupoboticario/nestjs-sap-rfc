@@ -1,3 +1,16 @@
+## [4.1.0](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v4.0.5...v4.1.0) (2024-08-09)
+
+### Features
+
+* simplify action ([#1172](https://github.com/grupoboticario/nestjs-sap-rfc/issues/1172)) ([6921dcb](https://github.com/grupoboticario/nestjs-sap-rfc/commit/6921dcbad177059a7e1a16acbc08466fb2080c20))
+
+### Chores
+
+* bump versions ([7b69c84](https://github.com/grupoboticario/nestjs-sap-rfc/commit/7b69c84db10e2ac1e74704eaa98cbadf9eec94ab))
+* bump versions ([6a4260a](https://github.com/grupoboticario/nestjs-sap-rfc/commit/6a4260a06a482d311ffe30205ac9e48523ae3d29))
+* bump versions ([06ba9cf](https://github.com/grupoboticario/nestjs-sap-rfc/commit/06ba9cf2b8288846a46943d83af1653ac104f615))
+* fixing conventional-changelog-conventionalcommits ([fb8e243](https://github.com/grupoboticario/nestjs-sap-rfc/commit/fb8e243abad3b01469d74958976e4055e69af89d))
+
 ## [4.0.5](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v4.0.4...v4.0.5) (2024-05-27)
 
 
