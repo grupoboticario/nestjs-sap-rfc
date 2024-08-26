@@ -83,7 +83,7 @@
     "reflect-metadata": "^0.2.2",
     "rimraf": "^6.0.1",
     "semantic-release": "^24.0.0",
-    "ts-jest": "^29.2.4",
+    "ts-jest": "^29.2.5",
     "ts-loader": "^9.5.1",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.5.4"
