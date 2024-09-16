@@ -1,3 +1,9 @@
+## [4.1.2](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v4.1.1...v4.1.2) (2024-09-16)
+
+### Chores
+
+* bump versions ([bb4302a](https://github.com/grupoboticario/nestjs-sap-rfc/commit/bb4302a4a007f525783ef746f3fc350865de36e2))
+
 ## [4.1.1](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v4.1.0...v4.1.1) (2024-08-13)
 
 ### Chores

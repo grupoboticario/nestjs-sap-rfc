@@ -1,6 +1,6 @@
 {
   "name": "nestjs-sap-rfc",
-  "version": "4.1.1",
+  "version": "4.1.2",
   "author": "Grupo Boticário",
   "description": "NestJS SAP RFC Client, providing convenient ABAP business logic consumption from NestJS",
   "license": "MIT",
