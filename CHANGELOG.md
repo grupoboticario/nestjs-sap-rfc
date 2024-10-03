@@ -1,3 +1,9 @@
+## [4.1.4](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v4.1.3...v4.1.4) (2024-10-03)
+
+### Chores
+
+* alter tsconfigRootDir to __dirname ([c35a541](https://github.com/grupoboticario/nestjs-sap-rfc/commit/c35a5410e2ccfbd3f239f41896598fc6af269c8c))
+
 ## [4.1.3](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v4.1.2...v4.1.3) (2024-10-03)
 
 ### Chores
