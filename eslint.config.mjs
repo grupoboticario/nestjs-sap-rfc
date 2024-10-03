@@ -47,7 +47,7 @@ export default [
 
       parserOptions: {
         project: 'tsconfig.json',
-        tsconfigRootDir: '/Users/alvaro.junior/Workspace/nestjs-sap-rfc',
+        tsconfigRootDir: __dirname,
       },
     },
 
