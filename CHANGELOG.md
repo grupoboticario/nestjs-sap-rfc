@@ -1,3 +1,9 @@
+## [4.1.3](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v4.1.2...v4.1.3) (2024-10-03)
+
+### Chores
+
+* bump versions and migrate to eslint 9.x ([59bcc8e](https://github.com/grupoboticario/nestjs-sap-rfc/commit/59bcc8e1bc6fb6bf92a916b0f8f1943e7434c413))
+
 ## [4.1.2](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v4.1.1...v4.1.2) (2024-09-16)
 
 ### Chores
