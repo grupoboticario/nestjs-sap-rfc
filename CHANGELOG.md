@@ -1,3 +1,9 @@
+## [4.1.8](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v4.1.7...v4.1.8) (2025-02-07)
+
+### Chores
+
+* upgraded to nestjs v11 ([fed8ed7](https://github.com/grupoboticario/nestjs-sap-rfc/commit/fed8ed768589e74f70092dba66a74336ca4e98d0))
+
 ## [4.1.7](https://github.com/grupoboticario/nestjs-sap-rfc/compare/v4.1.6...v4.1.7) (2024-11-25)
 
 ### Chores
